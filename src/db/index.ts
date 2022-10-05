@@ -25,7 +25,7 @@ export function bootstrap() {
 export function getMessages() {
   const messageModel = getMessageModel()
 
-  if (!messageModel) return [{ id: 1, date: new Date(), content: 'Test' }]
+  if (!messageModel) return []
 
   return messageModel.find({})
 }
