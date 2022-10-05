@@ -11,7 +11,6 @@ function getBaseUrl() {
 
   // reference for vercel.com
   if (process.env.VERCEL_URL) {
-    console.error('process vercel url', process.env.VERCEL_URL)
     return `https://${process.env.VERCEL_URL}`
   }
 
