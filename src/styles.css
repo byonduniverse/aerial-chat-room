@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.chat-room {
+  width: 100%;
+  height: 80vh;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid gainsboro;
+}
+
+@media screen and (min-width: 600px) {
+  .chat-room {
+    width: 400px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .chat-room {
+    width: 700px;
+  }
+}
+
+.chat-room .message-list {
+  flex-grow: 1;
+  background-color: gainsboro;
+  overflow: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.chat-room .message-panel {
+  padding: 12px;
+  background-color: white;
+  display: flex;
+  gap: 24px;
+}
+
+.message-panel .message-panel__input {
+  padding: 12px;
+  flex-grow: 1;
+  outline: none;
+}
+
+.message-panel .message-panel__button {
+  background-color: rgb(23, 90, 235);
+  color: white;
+  border: none;
+  padding: 8px 24px;
+}
+
+.message-panel .message-panel__button:hover {
+  background-color: rgb(67, 115, 219);
+  cursor: pointer;
+}
+
+.message-item .message-item__text {
+  padding: 12px;
+  background-color: white;
+}
+
+.message-item .message-item__date {
+  font-size: 12px;
+  padding: 4px 0;
+  color: grey;
+}
