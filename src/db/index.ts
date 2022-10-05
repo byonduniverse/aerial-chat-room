@@ -6,7 +6,11 @@ let connectionError: string | null = null
 let bootstrapped = false
 // let messageModel: Model<iMessage> | null = null
 export function bootstrap() {
+  console.log('bootstrap')
+
   if (bootstrapped) return
+
+  console.log('dbConfig.mongoose.uri', dbConfig.mongoose.uri)
 
   mongoose
     .connect(dbConfig.mongoose.uri)
